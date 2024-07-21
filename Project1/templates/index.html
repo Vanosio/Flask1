@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title >Blog</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <h1>My Note</h1>
+    <div class="container">
+        <a href="{{ url_for('new_post') }}"><button>Add New Post</button></a>
+        <ul>
+            {% for post in posts %}
+            <li class="post-item">
+                <div class="post-header">
+                    <span>{{ post['id'] }}</span>
+                    <a href="{{ url_for('get_post', post_id=post['id']) }}">{{ post['title'] }}</a>
+                    <form action="{{ url_for('delete_post', post_id=post['id']) }}" method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

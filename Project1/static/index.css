@@ -1,0 +1,99 @@
+/* Animated background */
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Centered title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Post item styling */
+.post-item {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #23a6d5;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Post header styling */
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-header a {
+    text-decoration: none;
+    color: #e73c7e;
+    font-weight: bold;
+}
+
+.post-header span {
+    margin-right: 15px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #23a6d5;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #23d5ab;
+}
+
+button:active {
+    background-color: #1d8c7a;
+}
+
+/* Add New Post button */
+.container a button {
+    background-color: #e73c7e;
+}
+
+.container a button:hover {
+    background-color: #ee7752;
+}

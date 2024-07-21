@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    <style>
+        #capture{
+            width: 1000px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    {% if post.picture[0:4] == 'http' %}
+        <img id="capture" src="{{post.picture}}">
+    {% endif %}
+    <p><a href="{{ url_for('index') }}">Back to index</a></p>
+</body>
+</html>
